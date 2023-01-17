@@ -1,0 +1,17 @@
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\bin\Debug\ArtPackage204.exe.config
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\bin\Debug\ArtPackage204.exe
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\bin\Debug\ArtPackage204.pdb
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.csproj.AssemblyReference.cache
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.csproj.SuggestedBindingRedirects.cache
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\MainWindow.g.cs
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\App.g.cs
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204_MarkupCompile.cache
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204_MarkupCompile.lref
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\MainWindow.baml
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.g.resources
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.Properties.Resources.resources
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.csproj.GenerateResource.cache
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.csproj.CoreCompileInputs.cache
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.exe
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.pdb
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\App.baml
