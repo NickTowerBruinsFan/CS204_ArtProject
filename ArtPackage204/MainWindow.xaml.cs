@@ -25,7 +25,7 @@ namespace ArtPackage204
             InitializeComponent();
         }
 
-        int picture = 1;
+        int picture = 0;
         private void maingrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {            
             
@@ -73,15 +73,13 @@ namespace ArtPackage204
             maingrid.Children.Add(img);
         }
 
-        private void Button_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Grass selected.");
             picture = 0;
         }
 
-        private void Button_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Road selected.");
             picture = 1;
         }
     }

@@ -31,7 +31,7 @@
             <RowDefinition Height="60"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
-        <Button Margin="-2,105,2,-105" Grid.Row="9" MouseLeftButtonDown="Button_MouseLeftButtonDown"/>
-        <Button Grid.Column="1" Grid.ColumnSpan="2" Margin="22,105,38,-105" Grid.Row="9" MouseLeftButtonDown="Button_MouseLeftButtonDown_1"/>
+        <Button Margin="-2,105,2,-105" Grid.Row="9" Click="Button_Click" Background="Transparent"/>
+        <Button Grid.Column="1" Grid.ColumnSpan="2" Margin="31,105,29,-105" Grid.Row="9" Click="Button_Click_1"/>
     </Grid>
 </Window>
