@@ -73,12 +73,12 @@ namespace ArtPackage204
             maingrid.Children.Add(img);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ListBoxItem_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             picture = 0;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void ListBoxItem_PreviewMouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
         {
             picture = 1;
         }
