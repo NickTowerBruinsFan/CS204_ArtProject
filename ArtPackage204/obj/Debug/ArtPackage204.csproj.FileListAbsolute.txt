@@ -15,3 +15,9 @@ C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debu
 C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.exe
 C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.pdb
 C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\App.baml
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\Page1.g.cs
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\Page1.baml
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\Page2.g.cs
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\Page2.baml
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\Page3.g.cs
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\Page3.baml

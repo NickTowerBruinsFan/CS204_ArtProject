@@ -5,36 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ArtPackage204"
         mc:Ignorable="d"
-        Title="Map Designer" Height="1000" Width="1000"
+        Title="Map Designer" Height="750" Width="750"
         Background="SlateGray">
-    <Grid Name ="maingrid" MouseLeftButtonDown="maingrid_MouseLeftButtonDown" ShowGridLines="True" Background="White"  Height="600" Width="600">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
-        </Grid.RowDefinitions>
-        <ListBox Margin="-158,-1,118,1" Height="600" Width="100" Grid.RowSpan="10">
-            <ListBoxItem Content = "Grass" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown"/>
-            <ListBoxItem Content= "Straight Path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_1"/>
-        </ListBox>
+
+    <Grid>
+        <ComboBox Height="50" Width="200" Name="newmap"  IsEditable="True" Text="Create a new map or load a map" Margin="142,242,142,192">
+            <ComboBoxItem>
+                <Button Content="10x10" Click="Button_Click" Width="190" Height="20"/>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <Button Content="15x15" Click="Button_Click_1" Width="190" Height="20"/>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <Button Content="20x20" Click="Button_Click_2" Width="190" Height="20"/>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <Button Content="Load" Click="Button_Click_3" Width="190" Height="20"/>
+            </ComboBoxItem>
+        </ComboBox>
+
     </Grid>
 </Window>
