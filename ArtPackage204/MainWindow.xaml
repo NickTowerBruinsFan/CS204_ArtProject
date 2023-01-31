@@ -23,6 +23,20 @@
                 <Button Content="Load" Click="Button_Click_3" Width="190" Height="20"/>
             </ComboBoxItem>
         </ComboBox>
-
     </Grid>
+    <Page>
+        <InkCanvas Name="myInkCanvas" MouseRightButtonDown="RightMouseUpHandler">
+            <InkCanvas.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="Red" Offset="0.1" />
+                    <GradientStop Color="Orange" Offset="0.3" />
+                    <GradientStop Color="Yellow" Offset="0.3" />
+                    <GradientStop Color="Green" Offset="0.3" />
+                    <GradientStop Color="Blue" Offset="0.3" />
+                    <GradientStop Color="Purple" Offset="0.1" />
+                    <GradientStop Color="HotPink" Offset="0.1" />
+                </LinearGradientBrush>
+            </InkCanvas.Background>
+        </InkCanvas>
+    </Page>
 </Window>
