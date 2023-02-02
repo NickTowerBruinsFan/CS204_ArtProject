@@ -61,12 +61,12 @@ namespace ArtPackage204
             var bitmapImage = new BitmapImage();
             if (picture == 0)
             {
-                bitmapImage = new BitmapImage(new Uri(@"C:\Users\eerin\OneDrive\Pictures\grass.jpg"));
+               bitmapImage = new BitmapImage(new Uri(@"C:\Users\eerin\OneDrive\Desktop\204 project pictures\grass.jpg"));
 
             }
             else if (picture == 1)
             {
-                bitmapImage = new BitmapImage(new Uri(@"C:\Users\eerin\OneDrive\Pictures\uppath.jpg"));
+               bitmapImage = new BitmapImage(new Uri(@"C:\Users\eerin\OneDrive\Desktop\204 project pictures\uppath.jpg"));
             }
 
 
@@ -125,6 +125,21 @@ namespace ArtPackage204
         private void ListBoxItem_PreviewMouseLeftButtonDown_8(object sender, MouseButtonEventArgs e)
         {
             picture = 8;
+        }
+
+        private void ListBoxItem_PreviewMouseLeftButtonDown_9(object sender, MouseButtonEventArgs e)
+        {
+            picture = 9;
+        }
+
+        private void ListBoxItem_PreviewMouseLeftButtonDown_10(object sender, MouseButtonEventArgs e)
+        {
+            picture = 10;
+        }
+
+        private void ListBoxItem_PreviewMouseLeftButtonDown_11(object sender, MouseButtonEventArgs e)
+        {
+            picture = 11;
         }
     }
 }
