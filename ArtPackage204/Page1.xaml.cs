@@ -126,5 +126,10 @@ namespace ArtPackage204
         {
             picture = 8;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e) //Save button
+        {
+
+        }
     }
 }
