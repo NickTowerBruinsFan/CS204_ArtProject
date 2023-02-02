@@ -1,4 +1,4 @@
-﻿<Window x:Class="ArtPackage204.MainWindow"
+<Window x:Class="ArtPackage204.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -25,4 +25,19 @@
         </ComboBox>
         <TextBlock Text="TBD" Width="750" Height="100" Margin="-25,154,-25,480" TextAlignment="Center" FontSize="30"/>
     </Grid>
+    <Page>
+        <InkCanvas Name="myInkCanvas" MouseRightButtonDown="RightMouseUpHandler">
+            <InkCanvas.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="Red" Offset="0.1" />
+                    <GradientStop Color="Orange" Offset="0.3" />
+                    <GradientStop Color="Yellow" Offset="0.3" />
+                    <GradientStop Color="Green" Offset="0.3" />
+                    <GradientStop Color="Blue" Offset="0.3" />
+                    <GradientStop Color="Purple" Offset="0.1" />
+                    <GradientStop Color="HotPink" Offset="0.1" />
+                </LinearGradientBrush>
+            </InkCanvas.Background>
+        </InkCanvas>
+    </Page>
 </Window>
