@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS 204schema;
+CREATE DATABASE 204schema;
+USE 204schema;
+
+CREATE TABLE IF NOT EXISTS savetable (
+`SaveID` INT,
+`SaveName` VARCHAR(45),
+`PathToFile` VARCHAR(400),
+PRIMARY KEY(SaveID)
+);
