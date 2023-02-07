@@ -61,12 +61,12 @@ namespace ArtPackage204
             var bitmapImage = new BitmapImage();
             if (picture == 0)
             {
-                bitmapImage = new BitmapImage(new Uri(@"C:\Users\eerin\OneDrive\Pictures\grass.jpg"));
+                bitmapImage = new BitmapImage(new Uri(@"pack://application:,,,/Images/grass.jpg"));
 
             }
             else if (picture == 1)
             {
-                bitmapImage = new BitmapImage(new Uri(@"C:\Users\eerin\OneDrive\Pictures\uppath.jpg"));
+                bitmapImage = new BitmapImage(new Uri(@"%userprofile%\AppData\Roaming\204_project_pictures\uppath.jpg"));
             }
 
 

@@ -161,5 +161,23 @@
   <ItemGroup>
     <Resource Include="assests\uppath.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\crosspath.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\curvepath.jpg" />
+    <Resource Include="Images\curvepathbottemleft.jpg" />
+    <Resource Include="Images\curvepathupperleft.jpg" />
+    <Resource Include="Images\curvepathupperright.jpg" />
+    <Resource Include="Images\grass.jpg" />
+    <Resource Include="Images\horixontalpath.jpg" />
+    <Resource Include="Images\stairs.jpg" />
+    <Resource Include="Images\tshapepath.jpg" />
+    <Resource Include="Images\tshapepath2.jpg" />
+    <Resource Include="Images\tshapepath3.jpg" />
+    <Resource Include="Images\tshapepath4.jpg" />
+    <Resource Include="Images\uppath.jpg" />
+    <Resource Include="Images\wall.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
