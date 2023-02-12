@@ -49,11 +49,6 @@ namespace ArtPackage204
 
         }
 
-        private void RightMouseUpHandler(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            Matrix m = new Matrix();
-            m.Scale(1.1d, 1.1d);
-            ((InkCanvas)sender).Strokes.Transform(m, true);
-        }
+
     }
 }

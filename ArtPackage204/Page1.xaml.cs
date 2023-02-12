@@ -23,6 +23,7 @@ namespace ArtPackage204
         public Page1()
         {
             InitializeComponent();
+
         }
 
         int picture = 0;
@@ -70,76 +71,108 @@ namespace ArtPackage204
             }
 
 
+            if (picture != -1)
+            {
+                img.Source = bitmapImage;
 
-            img.Source = bitmapImage;
-
-            img.SetValue(Grid.RowProperty, row);
-            img.SetValue(Grid.ColumnProperty, col);
+                img.SetValue(Grid.RowProperty, row);
+                img.SetValue(Grid.ColumnProperty, col);
 
 
-            maingrid.Children.Add(img);
-
+                maingrid.Children.Add(img);
+            }
 
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             picture = 0;
+            canvas.EditingMode = InkCanvasEditingMode.None;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
         {
             picture = 1;
+            canvas.EditingMode = InkCanvasEditingMode.None;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_7(object sender, MouseButtonEventArgs e)
         {
             picture = 2;
+            canvas.EditingMode = InkCanvasEditingMode.None;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_2(object sender, MouseButtonEventArgs e)
         {
             picture = 3;
+            canvas.EditingMode = InkCanvasEditingMode.None;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_3(object sender, MouseButtonEventArgs e)
         {
             picture = 4;
+            canvas.EditingMode = InkCanvasEditingMode.None;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_4(object sender, MouseButtonEventArgs e)
         {
             picture = 5;
+            canvas.EditingMode = InkCanvasEditingMode.None;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_5(object sender, MouseButtonEventArgs e)
         {
             picture = 6;
+            canvas.EditingMode = InkCanvasEditingMode.None;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_6(object sender, MouseButtonEventArgs e)
         {
             picture = 7;
+            canvas.EditingMode = InkCanvasEditingMode.None;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_8(object sender, MouseButtonEventArgs e)
         {
             picture = 8;
+            canvas.EditingMode = InkCanvasEditingMode.None;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_9(object sender, MouseButtonEventArgs e)
         {
             picture = 9;
+            canvas.EditingMode = InkCanvasEditingMode.None;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_10(object sender, MouseButtonEventArgs e)
         {
             picture = 10;
+            canvas.EditingMode = InkCanvasEditingMode.None;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_11(object sender, MouseButtonEventArgs e)
         {
             picture = 11;
+            canvas.EditingMode = InkCanvasEditingMode.None;
+        }
+
+        private void ListBoxItem_PreviewMouseLeftButtonDown_12(object sender, MouseButtonEventArgs e)
+        {
+            picture = 12;
+            canvas.EditingMode = InkCanvasEditingMode.None;
+            
+        }
+
+        private void ListBoxItem_PreviewMouseLeftButtonDown_13(object sender, MouseButtonEventArgs e)
+        {
+            picture = -1;
+            canvas.EditingMode = InkCanvasEditingMode.Ink;
+        }
+
+        private void ListBoxItem_PreviewMouseLeftButtonDown_14(object sender, MouseButtonEventArgs e)
+        {
+            picture = -1;
+            canvas.EditingMode = InkCanvasEditingMode.Ink;
         }
     }
 }
