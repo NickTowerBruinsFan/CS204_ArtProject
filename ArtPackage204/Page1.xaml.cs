@@ -66,7 +66,7 @@ namespace ArtPackage204
             }
             else if (picture == 1)
             {
-                bitmapImage = new BitmapImage(new Uri(@"%userprofile%\AppData\Roaming\204_project_pictures\uppath.jpg"));
+                bitmapImage = new BitmapImage(new Uri(@"pack://application:,,,/Images/uppath.jpg"));
             }
 
 
@@ -130,6 +130,22 @@ namespace ArtPackage204
         private void Button_Click(object sender, RoutedEventArgs e) //Save button
         {
 
+        }
+
+        Image CreateBitmap(string uri)
+        {
+            return new Image() { Source = new BitmapImage(new Uri(uri)) };
+        }
+
+        Image[] GetImages()
+        {
+            var imageUris = new[]
+            {
+                "pack://application:,,,/img/3.jpg",
+                "pack://application:,,,/img/elephant.jpg",
+                "pack://application:,,,/img/banana.jpg"
+            };
+            return imageUris.Select(CreateBitmap).ToArray();
         }
     }
 }

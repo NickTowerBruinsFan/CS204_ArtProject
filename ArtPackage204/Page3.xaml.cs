@@ -58,12 +58,12 @@ namespace ArtPackage204
             var bitmapImage = new BitmapImage();
             if (picture == 0)
             {
-                bitmapImage = new BitmapImage(new Uri(@"%userprofile%\appdata\roaming\204_project_pictures\grass.jpg"));
+                bitmapImage = new BitmapImage(new Uri(@"pack://application:,,,/Images/grass.jpg/grass.jpg"));
 
             }
             else if (picture == 1)
             {
-                bitmapImage = new BitmapImage(new Uri(@"%userprofile%\appdata\roaming\204_project_pictures\uppath.jpg"));
+                bitmapImage = new BitmapImage(new Uri(@"pack://application:,,,/Images/grass.jpg/uppath.jpg"));
             }
 
 

@@ -154,12 +154,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="assests\grass.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assests\uppath.jpg" />
+    <Resource Include="Images\door.jpg" />
+    <Resource Include="Images\stone floor.jpg" />
+    <Resource Include="Images\window.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\crosspath.jpg" />
