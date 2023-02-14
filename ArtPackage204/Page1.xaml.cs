@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -25,8 +27,15 @@ namespace ArtPackage204
             InitializeComponent();
         }
 
-        int picture = 0;
+        public static void SerializeToXAML(UIElement element, string filename) //Serialize to XAML to load later
+        {
+            string xamlString = XamlWriter.Save(element);
+            FileStream filestream = File.Create(filename);
+            StreamWriter streamwriter = new StreamWriter(filestream);
+            streamwriter.Write(xamlString);
+        }
 
+        int picture = 0;
 
         private void maingrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -61,12 +70,12 @@ namespace ArtPackage204
             var bitmapImage = new BitmapImage();
             if (picture == 0)
             {
-                bitmapImage = new BitmapImage(new Uri(@"C:\Users\eerin\OneDrive\Pictures\grass.jpg"));
+                bitmapImage = new BitmapImage(new Uri(@"C:\Users\mdm02\Pictures\grass.jpg"));
 
             }
             else if (picture == 1)
             {
-                bitmapImage = new BitmapImage(new Uri(@"C:\Users\eerin\OneDrive\Pictures\uppath.jpg"));
+                bitmapImage = new BitmapImage(new Uri(@"C:\Users\mdm02\Pictures\uppath.jpg"));
             }
 
 
@@ -129,7 +138,9 @@ namespace ArtPackage204
 
         private void Button_Click(object sender, RoutedEventArgs e) //Save button
         {
-
+            string filename = "testfile.xaml";
+            SerializeToXAML(maingrid, filename);
+            MessageBox.Show(filename + " saved.");
         }
     }
 }
