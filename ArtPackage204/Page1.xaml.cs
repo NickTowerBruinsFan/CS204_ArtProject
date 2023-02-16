@@ -71,7 +71,7 @@ namespace ArtPackage204
             }
 
 
-            if (picture != -1)
+            if (picture != -1 && picture != -2)
             {
                 img.Source = bitmapImage;
 
@@ -80,7 +80,7 @@ namespace ArtPackage204
 
 
                 maingrid.Children.Add(img);
-            }
+            } 
 
         }
 
@@ -167,12 +167,25 @@ namespace ArtPackage204
         {
             picture = -1;
             canvas.EditingMode = InkCanvasEditingMode.Ink;
+            canvas.DefaultDrawingAttributes.Color = Colors.SandyBrown;
+            canvas.DefaultDrawingAttributes.Width = 20;
+            canvas.DefaultDrawingAttributes.Height = 20;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_14(object sender, MouseButtonEventArgs e)
         {
             picture = -1;
             canvas.EditingMode = InkCanvasEditingMode.Ink;
+            canvas.DefaultDrawingAttributes.Color = Colors.Red;
+            canvas.DefaultDrawingAttributes.Width = 20;
+            canvas.DefaultDrawingAttributes.Height = 20;
         }
+
+        private void ListBoxItem_PreviewMouseLeftButtonDown_15(object sender, MouseButtonEventArgs e)
+        {
+            picture = -2;
+        }
+    
+        
     }
 }

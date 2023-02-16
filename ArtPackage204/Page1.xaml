@@ -22,6 +22,7 @@
             <ListBoxItem Content="stairs" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_10"/>
             <ListBoxItem Content="window" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_11"/>
             <ListBoxItem Content="door" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_12"/>
+            <ListBoxItem Content="delete" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_15"/>
         </ListBox>
         <ListBox   Width="100" Height="600" Margin="800,0,0,0">
             <ListBoxItem Content="chest" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_13"/>

@@ -162,12 +162,18 @@ namespace ArtPackage204
         {
             picture = -1;
             canvas.EditingMode = InkCanvasEditingMode.Ink;
+            canvas.DefaultDrawingAttributes.Color = Colors.SandyBrown;
+            canvas.DefaultDrawingAttributes.Width = 20;
+            canvas.DefaultDrawingAttributes.Height = 20;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_14(object sender, MouseButtonEventArgs e)
         {
             picture = -1;
             canvas.EditingMode = InkCanvasEditingMode.Ink;
+            canvas.DefaultDrawingAttributes.Color = Colors.Red;
+            canvas.DefaultDrawingAttributes.Width = 20;
+            canvas.DefaultDrawingAttributes.Height = 20;
         }
     }
 }
