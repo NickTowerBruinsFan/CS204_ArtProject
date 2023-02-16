@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace ArtPackage204
 {
@@ -50,5 +51,21 @@ namespace ArtPackage204
         }
 
 
+        private void button_Click_4(object sender, RoutedEventArgs e)
+        {        
+            MySqlConnection sqlConnection;
+            string connectionString = "server=localhost;database=204schema;uid=root;pwd=MyNewPass;";
+            sqlConnection = new MySqlConnection(connectionString);
+            try
+            {
+                sqlConnection.Open();
+                MessageBox.Show("Connected to database.");
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Could not connect to database.");
+            }
+        }
     }
 }

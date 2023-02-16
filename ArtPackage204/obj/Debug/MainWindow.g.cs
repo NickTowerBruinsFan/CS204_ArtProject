@@ -48,6 +48,14 @@ namespace ArtPackage204 {
         #line default
         #line hidden
         
+        
+        #line 26 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button button;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -109,6 +117,15 @@ namespace ArtPackage204 {
             
             #line 23 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click_3);
+            
+            #line default
+            #line hidden
+            return;
+            case 6:
+            this.button = ((System.Windows.Controls.Button)(target));
+            
+            #line 26 "..\..\MainWindow.xaml"
+            this.button.Click += new System.Windows.RoutedEventHandler(this.button_Click_4);
             
             #line default
             #line hidden
