@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,18 +57,82 @@ namespace ArtPackage204
                 col++;
             }
 
-
+            BitmapImage[] images = GetImages();
             Image img = new Image { Width = 60, Height = 60 };
             var bitmapImage = new BitmapImage();
             if (picture == 0)
             {
-                bitmapImage = new BitmapImage(new Uri(@"pack://application:,,,/Images/grass.jpg"));
-
+                bitmapImage = images[6];
+            }
+            else if (picture == 0)
+            {
+                bitmapImage = images[6];
             }
             else if (picture == 1)
             {
-                bitmapImage = new BitmapImage(new Uri(@"pack://application:,,,/Images/uppath.jpg"));
+                bitmapImage = images[14];
             }
+            else if (picture == 2)
+            {
+                bitmapImage = images[7];
+            }
+            else if (picture == 3)
+            {
+                bitmapImage = images[1];
+            }
+            else if (picture == 4)
+            {
+                bitmapImage = images[2];
+            }
+            else if (picture == 5)
+            {
+                bitmapImage = images[4];
+            }
+            else if (picture == 6)
+            {
+                bitmapImage = images[3];
+            }
+            else if (picture == 7)
+            {
+                bitmapImage = images[0];
+            }
+            else if (picture == 8)
+            {
+                bitmapImage = images[15];
+            }
+            else if (picture == 9)
+            {
+                bitmapImage = images[5];
+            }
+            else if (picture == 10)
+            {
+                bitmapImage = images[8];
+            }
+            else if (picture == 11)
+            {
+                bitmapImage = images[9];
+            }
+            else if (picture == 12)
+            {
+                bitmapImage = images[16];
+            }
+            else if (picture == 13)
+            {
+                bitmapImage = images[10];
+            }
+            else if (picture == 14)
+            {
+                bitmapImage = images[11];
+            }
+            else if (picture == 15)
+            {
+                bitmapImage = images[12];
+            }
+            else if (picture == 16)
+            {
+                bitmapImage = images[13];
+            }
+
 
 
 
@@ -126,26 +191,59 @@ namespace ArtPackage204
         {
             picture = 8;
         }
+        private void ListBoxItem_PreviewMouseLeftButtonDown_9(object sender, MouseButtonEventArgs e)
+        {
+            picture = 9;
+        }
+        private void ListBoxItem_PreviewMouseLeftButtonDown_10(object sender, MouseButtonEventArgs e)
+        {
+            picture = 10;
+        }
+        private void ListBoxItem_PreviewMouseLeftButtonDown_11(object sender, MouseButtonEventArgs e)
+        {
+            picture = 11;
+        }
+        private void ListBoxItem_PreviewMouseLeftButtonDown_12(object sender, MouseButtonEventArgs e)
+        {
+            picture = 12;
+        }
+        private void ListBoxItem_PreviewMouseLeftButtonDown_13(object sender, MouseButtonEventArgs e)
+        {
+            picture = 13;
+        }
+        private void ListBoxItem_PreviewMouseLeftButtonDown_14(object sender, MouseButtonEventArgs e)
+        {
+            picture = 14;
+        }
+        private void ListBoxItem_PreviewMouseLeftButtonDown_15(object sender, MouseButtonEventArgs e)
+        {
+            picture = 15;
+        }
+        private void ListBoxItem_PreviewMouseLeftButtonDown_16(object sender, MouseButtonEventArgs e)
+        {
+            picture = 16;
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e) //Save button
         {
 
         }
 
-        Image CreateBitmap(string uri)
+        BitmapImage CreateBitmap(string uri)
         {
-            return new Image() { Source = new BitmapImage(new Uri(uri)) };
+            return new BitmapImage(new Uri(uri));
         }
 
-        Image[] GetImages()
+        BitmapImage[] GetImages()
         {
-            var imageUris = new[]
-            {
-                "pack://application:,,,/img/3.jpg",
-                "pack://application:,,,/img/elephant.jpg",
-                "pack://application:,,,/img/banana.jpg"
-            };
+            string currDir = Directory.GetCurrentDirectory();
+            string[] imageUris;
+
+            //Get directory path of myData 
+            string temp = currDir + "\\Images\\";
+            imageUris = Directory.GetFiles(temp, "*.jpg");
             return imageUris.Select(CreateBitmap).ToArray();
+
         }
     }
 }

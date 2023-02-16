@@ -44,8 +44,8 @@
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <ListBox Margin="-150,-1,90,-200" Height="600" Width="100" Grid.RowSpan="10">
-            <ListBoxItem Content = "Grass" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown"/>
-            <ListBoxItem Content= "Straight Path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_1"/>
+            <ListBoxItem Content = "grass" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown"/>
+            <ListBoxItem Content= "vertical path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_1"/>
             <ListBoxItem Content="horizontal path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_7"/>
             <ListBoxItem Content="up right curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_2"/>
             <ListBoxItem Content="up left curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_3"/>
@@ -53,6 +53,14 @@
             <ListBoxItem Content="down left curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_5"/>
             <ListBoxItem Content="4 way path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_6"/>
             <ListBoxItem Content="wall" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_8"/>
+            <ListBoxItem Content="door" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_9"/>
+            <ListBoxItem Content="stairs" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_10"/>
+            <ListBoxItem Content="stone floor" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_11"/>
+            <ListBoxItem Content="window" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_12"/>
+            <ListBoxItem Content="left t path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_13"/>
+            <ListBoxItem Content="t path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_14"/>
+            <ListBoxItem Content="right t path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_15"/>
+            <ListBoxItem Content="upside down t" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_16"/>
 
         </ListBox>
         <ListBox  Margin="85,-1,-145,1" Width="100" Height="600" Grid.Column="14" Grid.RowSpan="15">
