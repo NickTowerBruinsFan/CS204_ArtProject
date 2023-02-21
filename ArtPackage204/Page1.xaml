@@ -20,45 +20,52 @@
             <ListBoxItem Content="wall" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_8"/>
             <ListBoxItem Content="floor" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_9"/>
             <ListBoxItem Content="stairs" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_10"/>
-            <ListBoxItem Content="window" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_11"/>
-            <ListBoxItem Content="door" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_12"/>
+            <ListBoxItem Content="vertical window" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_11"/>
+            <ListBoxItem Content="horizontal window" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_21"/>
+            <ListBoxItem Content="vertical door" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_12"/>
+            <ListBoxItem Content="horizontal door" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_20"/>
             <ListBoxItem Content="delete" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_15"/>
+            <ListBoxItem Content="T shape path up" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_16"/>
+            <ListBoxItem Content="T shape path down" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_17"/>
+            <ListBoxItem Content="T shape path left" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_18"/>
+            <ListBoxItem Content="T shape path right" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_19"/>
         </ListBox>
         <ListBox   Width="100" Height="600" Margin="800,0,0,0">
             <ListBoxItem Content="chest" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_13"/>
             <ListBoxItem Content="enemy" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_14"/>
+            <ListBoxItem Content="eraser" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_22"/>
         </ListBox>
         <InkCanvas Name="canvas" Height="600" Width="600" Margin="200,0">
-        
-        <Grid Name ="maingrid" MouseLeftButtonDown="maingrid_MouseLeftButtonDown" ShowGridLines="True" Background="White"  Height="600" Width="600" Margin="0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-        </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-            </Grid.RowDefinitions>
-        </Grid>
+
+            <Grid Name ="maingrid" MouseLeftButtonDown="maingrid_MouseLeftButtonDown" ShowGridLines="True" Background="White"  Height="600" Width="600" Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+            </Grid>
         </InkCanvas>
-        <Button Margin="-1,103,1,-103" Grid.Row="9" >
+        <Button Margin="-1,103,1,-103" Height="75" Canvas.Left="133" Canvas.Top="558" Width="62"  >
         </Button>
-    
+
     </Canvas>
 </Page>

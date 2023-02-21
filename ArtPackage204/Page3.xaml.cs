@@ -59,36 +59,31 @@ namespace ArtPackage204
             var bitmapImage = new BitmapImage();
             if (picture == 0)
             {
-                bitmapImage = images[6];
-
-            }
-            else if (picture == 0)
-            {
-                bitmapImage = images[6];
+                bitmapImage = images[8];
             }
             else if (picture == 1)
             {
-                bitmapImage = images[14];
+                bitmapImage = images[16];
             }
             else if (picture == 2)
             {
-                bitmapImage = images[7];
+                bitmapImage = images[9];
             }
             else if (picture == 3)
             {
-                bitmapImage = images[1];
+                bitmapImage = images[4];
             }
             else if (picture == 4)
             {
-                bitmapImage = images[2];
+                bitmapImage = images[3];
             }
             else if (picture == 5)
             {
-                bitmapImage = images[4];
+                bitmapImage = images[1];
             }
             else if (picture == 6)
             {
-                bitmapImage = images[3];
+                bitmapImage = images[2];
             }
             else if (picture == 7)
             {
@@ -96,39 +91,51 @@ namespace ArtPackage204
             }
             else if (picture == 8)
             {
-                bitmapImage = images[15];
+                bitmapImage = images[17];
             }
             else if (picture == 9)
             {
-                bitmapImage = images[5];
+                bitmapImage = images[11];
             }
             else if (picture == 10)
             {
-                bitmapImage = images[8];
+                bitmapImage = images[10];
             }
             else if (picture == 11)
             {
-                bitmapImage = images[9];
+                bitmapImage = images[18];
             }
             else if (picture == 12)
             {
-                bitmapImage = images[16];
+                bitmapImage = images[6];
             }
             else if (picture == 13)
             {
-                bitmapImage = images[10];
+                bitmapImage = images[15];
             }
             else if (picture == 14)
             {
-                bitmapImage = images[11];
+                bitmapImage = images[13];
             }
             else if (picture == 15)
             {
-                bitmapImage = images[12];
+                bitmapImage = images[14];
             }
             else if (picture == 16)
             {
-                bitmapImage = images[13];
+                bitmapImage = images[12];
+            }
+            else if (picture == 18)
+            {
+                bitmapImage = images[5];
+            }
+            else if (picture == 19)
+            {
+                bitmapImage = images[19];
+            }
+            else if (picture == 20)
+            {
+                bitmapImage = images[7];
             }
 
 
@@ -240,37 +247,39 @@ namespace ArtPackage204
             canvas.DefaultDrawingAttributes.Width = 20;
             canvas.DefaultDrawingAttributes.Height = 20;
         }
-        private void ListBoxItem_PreviewMouseLeftButtonDown_9(object sender, MouseButtonEventArgs e)
-        {
-            picture = 9;
-        }
-        private void ListBoxItem_PreviewMouseLeftButtonDown_10(object sender, MouseButtonEventArgs e)
-        {
-            picture = 10;
-        }
-        private void ListBoxItem_PreviewMouseLeftButtonDown_11(object sender, MouseButtonEventArgs e)
-        {
-            picture = 11;
-        }
-        private void ListBoxItem_PreviewMouseLeftButtonDown_12(object sender, MouseButtonEventArgs e)
-        {
-            picture = 12;
-        }
-        private void ListBoxItem_PreviewMouseLeftButtonDown_13(object sender, MouseButtonEventArgs e)
-        {
-            picture = 13;
-        }
-        private void ListBoxItem_PreviewMouseLeftButtonDown_14(object sender, MouseButtonEventArgs e)
-        {
-            picture = 14;
-        }
+
         private void ListBoxItem_PreviewMouseLeftButtonDown_15(object sender, MouseButtonEventArgs e)
         {
-            picture = 15;
+            picture = 20;
         }
+
         private void ListBoxItem_PreviewMouseLeftButtonDown_16(object sender, MouseButtonEventArgs e)
         {
+            picture = 13;
+            canvas.EditingMode = InkCanvasEditingMode.None;
+        }
+
+        private void ListBoxItem_PreviewMouseLeftButtonDown_17(object sender, MouseButtonEventArgs e)
+        {
+            picture = 14;
+            canvas.EditingMode = InkCanvasEditingMode.None;
+        }
+
+        private void ListBoxItem_PreviewMouseLeftButtonDown_18(object sender, MouseButtonEventArgs e)
+        {
+            picture = 15;
+            canvas.EditingMode = InkCanvasEditingMode.None;
+        }
+
+        private void ListBoxItem_PreviewMouseLeftButtonDown_19(object sender, MouseButtonEventArgs e)
+        {
             picture = 16;
+            canvas.EditingMode = InkCanvasEditingMode.None;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e) //Save button
+        {
+
         }
 
         BitmapImage CreateBitmap(string uri)
@@ -288,6 +297,23 @@ namespace ArtPackage204
             imageUris = Directory.GetFiles(temp, "*.jpg");
             return imageUris.Select(CreateBitmap).ToArray();
 
+        }
+
+        private void ListBoxItem_PreviewMouseLeftButtonDown_20(object sender, MouseButtonEventArgs e)
+        {
+            picture = 18;
+            canvas.EditingMode = InkCanvasEditingMode.None;
+        }
+
+        private void ListBoxItem_PreviewMouseLeftButtonDown_21(object sender, MouseButtonEventArgs e)
+        {
+            picture = 19;
+            canvas.EditingMode = InkCanvasEditingMode.None;
+        }
+        private void ListBoxItem_PreviewMouseLeftButtonDown_22(object sender, MouseButtonEventArgs e)
+        {
+            picture = -1;
+            canvas.EditingMode = InkCanvasEditingMode.EraseByStroke;
         }
     }
 }
