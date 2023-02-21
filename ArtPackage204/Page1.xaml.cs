@@ -303,7 +303,7 @@ namespace ArtPackage204
                 "pack://application:,,,/Images/curvepathupperright.jpg",
                 "pack://application:,,,/Images/door.jpg",
                 "pack://application:,,,/Images/door1.jpg",
-                "pack://application:,,,/Images/eraser.jpg",
+                "pack://application:,,,/Images/earser.jpg",
                 "pack://application:,,,/Images/grass.jpg",
                 "pack://application:,,,/Images/horixontalpath.jpg",
                 "pack://application:,,,/Images/stairs.jpg",

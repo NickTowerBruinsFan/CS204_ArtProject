@@ -33,7 +33,7 @@
         <ListBox   Width="100" Height="600" Margin="800,0,0,0">
             <ListBoxItem Content="chest" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_13"/>
             <ListBoxItem Content="enemy" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_14"/>
-            <ListBoxItem Content="eraser" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_22" Selected="ListBoxItem_Selected"/>
+            <ListBoxItem Content="eraser" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_22"/>
         </ListBox>
         <InkCanvas Name="canvas" Height="600" Width="600" Margin="200,0">
 
