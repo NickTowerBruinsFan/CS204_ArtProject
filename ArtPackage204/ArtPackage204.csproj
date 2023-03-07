@@ -192,5 +192,8 @@
     <Resource Include="Images\earser.jpg" />
     <Resource Include="Images\window1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\background.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
