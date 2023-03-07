@@ -8,75 +8,72 @@
       d:DesignHeight="1000" d:DesignWidth="1000" Background="SlateGray"
       Title="Page2">
     <Viewbox Stretch="Uniform">
-    <Canvas Height="600" Width="1000">
-        <ListBox Margin="100,0" Height="600" Width="100" Grid.RowSpan="10">
-            <ListBoxItem Content="grass" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown"/>
-            <ListBoxItem Content= "vertical path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_1"/>
-            <ListBoxItem Content="horizontal path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_7"/>
-            <ListBoxItem Content="up right curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_2"/>
-            <ListBoxItem Content="up left curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_3"/>
-            <ListBoxItem Content="down right curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_4"/>
-            <ListBoxItem Content="down left curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_5"/>
-            <ListBoxItem Content="4 way path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_6"/>
-            <ListBoxItem Content="wall" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_8"/>
-            <ListBoxItem Content="floor" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_9"/>
-            <ListBoxItem Content="stairs" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_10"/>
-            <ListBoxItem Content="vertical window" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_11"/>
-            <ListBoxItem Content="horizontal window" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_21"/>
-            <ListBoxItem Content="vertical door" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_12"/>
-            <ListBoxItem Content="horizontal door" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_20"/>
-            <ListBoxItem Content="delete" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_15"/>
-            <ListBoxItem Content="T shape path up" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_16"/>
-            <ListBoxItem Content="T shape path down" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_17"/>
-            <ListBoxItem Content="T shape path left" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_18"/>
-            <ListBoxItem Content="T shape path right" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_19"/>
-        </ListBox>
-        <ListBox  Margin="800,0" Width="100" Height="600" Grid.Column="14" Grid.RowSpan="15">
-            <ListBoxItem Content="chest" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_13"/>
-            <ListBoxItem Content="enemy" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_14"/>
-            <ListBoxItem Content="eraser" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_22"/>
+        <Canvas Height="600" Width="1000" Name="bigcanvas" Keyboard.KeyDown="bigcanvas_KeyDown">
+            <ListBox  Height="600" Width="100" Margin="100,0,0,0">
+                <ListBoxItem Content="grass" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown"/>
+                <ListBoxItem Content= "vertical path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_1"/>
+                <ListBoxItem Content="horizontal path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_7"/>
+                <ListBoxItem Content="up right curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_2"/>
+                <ListBoxItem Content="up left curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_3"/>
+                <ListBoxItem Content="down right curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_4"/>
+                <ListBoxItem Content="down left curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_5"/>
+                <ListBoxItem Content="4 way path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_6"/>
+                <ListBoxItem Content="wall" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_8"/>
+                <ListBoxItem Content="floor" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_9"/>
+                <ListBoxItem Content="stairs" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_10"/>
+                <ListBoxItem Content="vertical window" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_11"/>
+                <ListBoxItem Content="horizontal window" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_21"/>
+                <ListBoxItem Content="vertical door" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_12"/>
+                <ListBoxItem Content="horizontal door" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_20"/>
+                <ListBoxItem Content="delete" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_15"/>
+                <ListBoxItem Content="T shape path up" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_16"/>
+                <ListBoxItem Content="T shape path down" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_17"/>
+                <ListBoxItem Content="T shape path left" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_18"/>
+                <ListBoxItem Content="T shape path right" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_19"/>
+            </ListBox>
+            <ListBox   Width="100" Height="600" Margin="800,0,0,0">
+                <ListBoxItem Content="chest" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_13"/>
+                <ListBoxItem Content="enemy" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_14"/>
+                <ListBoxItem Content="eraser" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_22"/>
                 <ListBoxItem Content="trap" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_23"/>
             </ListBox>
-        <InkCanvas Height="600" Width="600" Margin="200,0" Name="canvas">
-        <Grid Name ="maingrid" MouseLeftButtonDown="maingrid_MouseLeftButtonDown" ShowGridLines="True" Background="White"  Height="600" Width="600" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="40"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-            </Grid.RowDefinitions>
-        </Grid>
-        </InkCanvas>
+            <InkCanvas Name="canvas" Height="600" Width="600" Margin="200,0" >
+
+                <Grid Name ="maingrid" MouseLeftButtonDown="maingrid_MouseLeftButtonDown" ShowGridLines="True" Background="White"  Height="600" Width="600" Margin="0" >
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform x:Name="trans" />
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="60"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </InkCanvas>
             <Button Margin="-1,103,1,-103" Height="75" Canvas.Left="819" Canvas.Top="403" Width="62" Click="Button_Click" >
             </Button>
+            <Button Name="zoomin" Height="75" Width="62" Canvas.Left="818" Canvas.Top="394" Click="zoomin_Click"/>
         </Canvas>
     </Viewbox>
 </Page>

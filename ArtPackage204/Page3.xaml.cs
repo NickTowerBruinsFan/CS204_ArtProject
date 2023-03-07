@@ -22,6 +22,8 @@ namespace ArtPackage204
     public partial class Page3 : Page
     {
         int picture = 0;
+        bool iszoomed;
+        Point last;
         public Page3()
         {
             InitializeComponent();
@@ -323,6 +325,93 @@ namespace ArtPackage204
             canvas.DefaultDrawingAttributes.Color = Colors.Blue;
             canvas.DefaultDrawingAttributes.Width = 10;
             canvas.DefaultDrawingAttributes.Height = 10;
+        }
+        private void zoomin_Click(object sender, RoutedEventArgs e)
+        {
+            var scaler = maingrid.LayoutTransform as ScaleTransform;
+
+            if (scaler == null)
+            {
+
+                maingrid.LayoutTransform = new ScaleTransform(1.5, 1.5);
+            }
+            else
+            {
+                double curZoomFactor = scaler.ScaleX;
+
+
+
+                if (scaler.HasAnimatedProperties)
+                {
+
+
+                    scaler.BeginAnimation(ScaleTransform.ScaleXProperty, null);
+                    scaler.BeginAnimation(ScaleTransform.ScaleYProperty, null);
+                }
+
+                if (curZoomFactor == 1.0)
+                {
+                    scaler.ScaleX = 1.5;
+                    scaler.ScaleY = 1.5;
+                    iszoomed = true;
+                }
+                else
+                {
+                    scaler.ScaleX = 1.0;
+                    scaler.ScaleY = 1.0;
+                    iszoomed = false;
+                }
+            }
+        }
+
+        int tempy = 0;
+        int tempx = 0;
+        private void bigcanvas_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.W)
+            {
+                if (iszoomed == true)
+                {
+                    trans.Y += 10;
+
+                }
+
+            }
+            if (e.Key == Key.A)
+            {
+                if (iszoomed == true)
+                {
+                    trans.X += 10;
+
+                }
+
+            }
+            if (e.Key == Key.S)
+            {
+                if (iszoomed == true)
+                {
+                    trans.Y -= 10;
+
+                }
+
+            }
+            if (e.Key == Key.D)
+            {
+                if (iszoomed == true)
+                {
+                    trans.X -= 10;
+
+                }
+            }
+            if (e.Key == Key.R)
+            {
+                if (iszoomed == true)
+                {
+                    trans.X = 0;
+                    trans.Y = 0;
+
+                }
+            }
         }
     }
 }
