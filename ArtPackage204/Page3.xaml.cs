@@ -235,8 +235,8 @@ namespace ArtPackage204
             picture = -1;
             canvas.EditingMode = InkCanvasEditingMode.Ink;
             canvas.DefaultDrawingAttributes.Color = Colors.SandyBrown;
-            canvas.DefaultDrawingAttributes.Width = 20;
-            canvas.DefaultDrawingAttributes.Height = 20;
+            canvas.DefaultDrawingAttributes.Width = 10;
+            canvas.DefaultDrawingAttributes.Height = 10;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_14(object sender, MouseButtonEventArgs e)
@@ -244,13 +244,14 @@ namespace ArtPackage204
             picture = -1;
             canvas.EditingMode = InkCanvasEditingMode.Ink;
             canvas.DefaultDrawingAttributes.Color = Colors.Red;
-            canvas.DefaultDrawingAttributes.Width = 20;
-            canvas.DefaultDrawingAttributes.Height = 20;
+            canvas.DefaultDrawingAttributes.Width = 10;
+            canvas.DefaultDrawingAttributes.Height = 10;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_15(object sender, MouseButtonEventArgs e)
         {
             picture = 20;
+            canvas.EditingMode = InkCanvasEditingMode.None;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_16(object sender, MouseButtonEventArgs e)
@@ -314,6 +315,14 @@ namespace ArtPackage204
         {
             picture = -1;
             canvas.EditingMode = InkCanvasEditingMode.EraseByStroke;
+        }
+        private void ListBoxItem_PreviewMouseLeftButtonDown_23(object sender, MouseButtonEventArgs e)
+        {
+            picture = -1;
+            canvas.EditingMode = InkCanvasEditingMode.Ink;
+            canvas.DefaultDrawingAttributes.Color = Colors.Blue;
+            canvas.DefaultDrawingAttributes.Width = 10;
+            canvas.DefaultDrawingAttributes.Height = 10;
         }
     }
 }

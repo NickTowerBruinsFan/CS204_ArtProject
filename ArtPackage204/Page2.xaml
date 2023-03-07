@@ -7,6 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="1000" d:DesignWidth="1000" Background="SlateGray"
       Title="Page2">
+    <Viewbox Stretch="Uniform">
     <Canvas Height="600" Width="1000">
         <ListBox Margin="100,0" Height="600" Width="100" Grid.RowSpan="10">
             <ListBoxItem Content="grass" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown"/>
@@ -34,7 +35,8 @@
             <ListBoxItem Content="chest" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_13"/>
             <ListBoxItem Content="enemy" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_14"/>
             <ListBoxItem Content="eraser" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_22"/>
-        </ListBox>
+                <ListBoxItem Content="trap" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_23"/>
+            </ListBox>
         <InkCanvas Height="600" Width="600" Margin="200,0" Name="canvas">
         <Grid Name ="maingrid" MouseLeftButtonDown="maingrid_MouseLeftButtonDown" ShowGridLines="True" Background="White"  Height="600" Width="600" >
             <Grid.ColumnDefinitions>
@@ -73,5 +75,8 @@
             </Grid.RowDefinitions>
         </Grid>
         </InkCanvas>
-    </Canvas>
+            <Button Margin="-1,103,1,-103" Height="75" Canvas.Left="819" Canvas.Top="403" Width="62" Click="Button_Click" >
+            </Button>
+        </Canvas>
+    </Viewbox>
 </Page>

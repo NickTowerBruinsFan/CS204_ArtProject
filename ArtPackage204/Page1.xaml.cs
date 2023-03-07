@@ -28,7 +28,8 @@ namespace ArtPackage204
         }
 
         int picture = 0;
-
+        bool iszoomed;
+        Point last;
 
         private void maingrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -256,6 +257,7 @@ namespace ArtPackage204
         private void ListBoxItem_PreviewMouseLeftButtonDown_15(object sender, MouseButtonEventArgs e)
         {
             picture = 20;
+            canvas.EditingMode = InkCanvasEditingMode.None;
         }
 
         private void ListBoxItem_PreviewMouseLeftButtonDown_16(object sender, MouseButtonEventArgs e)
@@ -320,6 +322,103 @@ namespace ArtPackage204
         {
             picture = -1;
             canvas.EditingMode = InkCanvasEditingMode.EraseByStroke;
+        }
+
+        private void ListBoxItem_PreviewMouseLeftButtonDown_23(object sender, MouseButtonEventArgs e)
+        {
+            picture = -1;
+            canvas.EditingMode = InkCanvasEditingMode.Ink;
+            canvas.DefaultDrawingAttributes.Color = Colors.Blue;
+            canvas.DefaultDrawingAttributes.Width = 20;
+            canvas.DefaultDrawingAttributes.Height = 20;
+        }
+
+        private void zoomin_Click(object sender, RoutedEventArgs e)
+        {
+            var scaler = maingrid.LayoutTransform as ScaleTransform;
+
+            if (scaler == null)
+            {
+
+                maingrid.LayoutTransform = new ScaleTransform(1.5, 1.5);
+            }
+            else
+            {
+                double curZoomFactor = scaler.ScaleX;
+
+
+
+                if (scaler.HasAnimatedProperties)
+                {
+
+
+                    scaler.BeginAnimation(ScaleTransform.ScaleXProperty, null);
+                    scaler.BeginAnimation(ScaleTransform.ScaleYProperty, null);
+                }
+
+                if (curZoomFactor == 1.0)
+                {
+                    scaler.ScaleX = 1.5;
+                    scaler.ScaleY = 1.5;
+                    iszoomed = true;
+                }
+                else
+                {
+                    scaler.ScaleX = 1.0;
+                    scaler.ScaleY = 1.0;
+                    iszoomed = false;
+                }
+            }
+        }
+
+        int tempy = 0;
+        int tempx = 0;
+        private void bigcanvas_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.W)
+            {
+                if (iszoomed == true)
+                {
+                    trans.Y += 10;
+                  
+                }
+
+            }
+            if (e.Key == Key.A)
+            {
+                if (iszoomed == true)
+                {
+                    trans.X += 10;
+                   
+                }
+
+            }
+            if (e.Key == Key.S)
+            {
+                if (iszoomed == true)
+                {
+                    trans.Y -= 10;
+                  
+                }
+
+            }
+            if (e.Key == Key.D)
+            {
+                if (iszoomed == true)
+                {
+                    trans.X -= 10;
+                  
+                }
+            }
+            if (e.Key == Key.R)
+            {
+                if (iszoomed == true)
+                {
+                    trans.X = 0;
+                    trans.Y = 0;
+
+                }
+            }
         }
     }
 }
