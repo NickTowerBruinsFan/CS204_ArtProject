@@ -31,7 +31,7 @@
                 <ListBoxItem Content="T shape path left" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_18"/>
                 <ListBoxItem Content="T shape path right" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_19"/>
             </ListBox>
-            <ListBox   Width="100" Height="600" Margin="800,0,0,0">
+            <ListBox   Width="100" Height="600" Margin="800,0,0,0" >
                 <ListBoxItem Content="chest" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_13"/>
                 <ListBoxItem Content="enemy" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_14"/>
                 <ListBoxItem Content="eraser" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_22"/>
