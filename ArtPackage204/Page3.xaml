@@ -8,7 +8,7 @@
       d:DesignHeight="1000" d:DesignWidth="1000" Background="SlateGray"
       Title="Page3">
     <Grid>
-        <Image Source="Images/stone floor.jpg"/>
+        <Image Source="Resources/2.jpg"/>
         <Canvas Width=" 1000" Height="600 ">
             <ListBox  Height="600" Width="100" Margin=" 100,0" >
                 <ListBoxItem Content="grass" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown">
