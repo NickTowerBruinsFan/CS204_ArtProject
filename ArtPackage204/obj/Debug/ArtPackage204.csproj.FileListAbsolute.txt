@@ -136,3 +136,4 @@ C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\bin\Debu
 C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.csproj.CopyComplete
+C:\Users\eerin\source\repos\cs204project\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.Images.resources

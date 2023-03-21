@@ -188,13 +188,13 @@
     <Resource Include="Images\wall.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\door1.jpg" />
+    <Resource Include="Images\door1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\earser.jpg" />
+    <Resource Include="Images\earser.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\window1.jpg" />
+    <Resource Include="Images\window1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

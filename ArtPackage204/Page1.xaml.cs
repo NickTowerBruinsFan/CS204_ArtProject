@@ -297,26 +297,26 @@ namespace ArtPackage204
         {
             var imageUris = new[]
             {
- "pack://application:,,,/Images/crosspath.jpg",
- "pack://application:,,,/Images/curvepath.jpg",
- "pack://application:,,,/Images/curvepathbottemleft.jpg",
- "pack://application:,,,/Images/curvepathupperleft.jpg",
- "pack://application:,,,/Images/curvepathupperright.jpg",
- "pack://application:,,,/Images/door.jpg",
- "pack://application:,,,/Images/door1.jpg",
- "pack://application:,,,/Images/earser.jpg",
- "pack://application:,,,/Images/grass.jpg",
- "pack://application:,,,/Images/horixontalpath.jpg",
- "pack://application:,,,/Images/stairs.jpg",
- "pack://application:,,,/Images/stone floor.jpg",
- "pack://application:,,,/Images/tshapepath.jpg",
- "pack://application:,,,/Images/tshapepath2.jpg",
- "pack://application:,,,/Images/tshapepath3.jpg",
- "pack://application:,,,/Images/tshapepath4.jpg",
- "pack://application:,,,/Images/uppath.jpg",
- "pack://application:,,,/Images/wall.jpg",
- "pack://application:,,,/Images/window.jpg",
- "pack://application:,,,/Images/window1.jpg"
+            "pack://application:,,,/Images/crosspath.jpg",
+            "pack://application:,,,/Images/curvepath.jpg",
+            "pack://application:,,,/Images/curvepathbottemleft.jpg",
+            "pack://application:,,,/Images/curvepathupperleft.jpg",
+            "pack://application:,,,/Images/curvepathupperright.jpg",
+            "pack://application:,,,/Images/door.jpg",
+            "pack://application:,,,/Images/door1.jpg",
+            "pack://application:,,,/Images/earser.jpg",
+            "pack://application:,,,/Images/grass.jpg",
+            "pack://application:,,,/Images/horixontalpath.jpg",
+            "pack://application:,,,/Images/stairs.jpg",
+            "pack://application:,,,/Images/stone floor.jpg",
+            "pack://application:,,,/Images/tshapepath.jpg",
+            "pack://application:,,,/Images/tshapepath2.jpg",
+            "pack://application:,,,/Images/tshapepath3.jpg",
+            "pack://application:,,,/Images/tshapepath4.jpg",
+            "pack://application:,,,/Images/uppath.jpg",
+            "pack://application:,,,/Images/wall.jpg",
+            "pack://application:,,,/Images/window.jpg",
+            "pack://application:,,,/Images/window1.jpg"
  };
             return imageUris.Select(CreateBitmap).ToArray();
         }
@@ -397,7 +397,7 @@ namespace ArtPackage204
                     trans.Y += 10;
                   
                 }
-
+                 
             }
             if (e.Key == Key.A)
             {
@@ -435,5 +435,7 @@ namespace ArtPackage204
                 }
             }
         }
+
+
     }
 }
