@@ -429,5 +429,15 @@ namespace ArtPackage204
                 }
             }
         }
+        private void return_Click(object sender, RoutedEventArgs e)
+        {
+
+            var w = Application.Current.Windows[0];
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            w.Close();
+
+
+        }
     }
 }

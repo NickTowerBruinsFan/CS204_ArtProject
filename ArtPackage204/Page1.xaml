@@ -109,7 +109,8 @@
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/tshapepath.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
-                </ListBoxItem>            </ListBox>
+                </ListBoxItem>
+            </ListBox>
             <ListBox   Width="100" Height="600" Margin="800,0,0,0" >
                 <ListBoxItem Content="chest" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_13"/>
                 <ListBoxItem Content="enemy" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_14"/>
@@ -150,9 +151,12 @@
                     </Grid.RowDefinitions>
                 </Grid>
             </InkCanvas>
-            <Button Margin="-1,103,1,-103" Height="75" Canvas.Left="819" Canvas.Top="403" Width="62" Click="Button_Click" >
+            <Button Name="Save" Content="Save" Margin="-1,103,1,-103" Height="75" Canvas.Left="819" Canvas.Top="403" Width="62" Click="Button_Click" >
             </Button>
-            <Button Name="zoomin" Height="75" Width="62" Canvas.Left="818" Canvas.Top="394" Click="zoomin_Click"/>
+
+            <Button Name="zoomin" Content="Zoom" Height="75" Width="62" Canvas.Left="818" Canvas.Top="394" Click="zoomin_Click"/>
+            <Button Name="return" Content="Home" Width="62" Height="76"  Canvas.Left="818" Canvas.Top="281" Click="return_Click"/>
+
         </Canvas>
     </Viewbox>
 </Page>

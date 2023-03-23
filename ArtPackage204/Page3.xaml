@@ -171,9 +171,11 @@
                     </Grid.RowDefinitions>
                 </Grid>
             </InkCanvas>
-            <Button Margin="-1,103,1,-103" Height="75" Canvas.Left="819" Canvas.Top="403" Width="62" Click="Button_Click" >
+            <Button Name="Save" Content="Save" Margin="-1,103,1,-103" Height="75" Canvas.Left="819" Canvas.Top="403" Width="62" Click="Button_Click" >
             </Button>
-            <Button Name="zoomin" Height="75" Width="62" Canvas.Left="818" Canvas.Top="394" Click="zoomin_Click"/>
+
+            <Button Name="zoomin" Content="Zoom" Height="75" Width="62" Canvas.Left="818" Canvas.Top="394" Click="zoomin_Click"/>
+            <Button Name="return" Content="Home" Width="62" Height="76"  Canvas.Left="818" Canvas.Top="281" Click="return_Click"/>
         </Canvas>
     </Viewbox>
 </Page>
