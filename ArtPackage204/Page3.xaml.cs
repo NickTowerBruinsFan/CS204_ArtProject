@@ -22,6 +22,8 @@ namespace ArtPackage204
     public partial class Page3 : Page
     {
         int picture = 0;
+        string fileName = "";
+        string filePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Renders\";
         bool iszoomed;
         Point last;
         public Page3()
@@ -282,7 +284,7 @@ namespace ArtPackage204
 
         private void Button_Click(object sender, RoutedEventArgs e) //Save button
         {
-
+            InputBox.Visibility = System.Windows.Visibility.Visible;
         }
 
         BitmapImage CreateBitmap(string uri)
@@ -438,6 +440,31 @@ namespace ArtPackage204
             w.Close();
 
 
+        }
+
+        private void SaveToFile_Click(object sender, RoutedEventArgs e)
+        {
+            // Create a RenderTargetBitmap with the same dimensions as the data grid
+            RenderTargetBitmap renderBitmap = new RenderTargetBitmap(
+                (int)canvas.ActualWidth, (int)maingrid.ActualHeight,
+                96d, 96d, PixelFormats.Pbgra32);
+
+            // Render the data grid to the RenderTargetBitmap
+            renderBitmap.Render(maingrid);
+            fileName = InputField.Text + ".png";
+            filePath += fileName;
+
+            // Create a BitmapEncoder and save the bitmap to a file
+            BitmapEncoder encoder = new PngBitmapEncoder(); // Encodes to a PNG
+            encoder.Frames.Add(BitmapFrame.Create(renderBitmap));
+            using (FileStream stream = new FileStream(fileName, FileMode.Create))
+            {
+                encoder.Save(stream);
+            }
+
+            InputBox.Visibility = System.Windows.Visibility.Collapsed;
+            InputField.Text = "";
+            MessageBox.Show(fileName + " saved.");
         }
     }
 }

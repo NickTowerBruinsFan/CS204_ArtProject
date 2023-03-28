@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -28,6 +29,8 @@ namespace ArtPackage204
         }
 
         int picture = 0;
+        string fileName = "";
+        string filePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Renders\";
         bool iszoomed;
         Point last;
 
@@ -150,7 +153,6 @@ namespace ArtPackage204
 
                 img.SetValue(Grid.RowProperty, row);
                 img.SetValue(Grid.ColumnProperty, col);
-
 
                 maingrid.Children.Add(img);
             } 
@@ -286,7 +288,7 @@ namespace ArtPackage204
 
         private void Button_Click(object sender, RoutedEventArgs e) //Save button
         {
-           
+            InputBox.Visibility = System.Windows.Visibility.Visible;
         }
 
         BitmapImage CreateBitmap(string uri)
@@ -438,13 +440,35 @@ namespace ArtPackage204
 
         private void return_Click(object sender, RoutedEventArgs e)
         {
-
             var w = Application.Current.Windows[0];
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             w.Close();
-   
+        }
 
+        private void SaveToFile_Click(object sender, RoutedEventArgs e)
+        {
+            // Create a RenderTargetBitmap with the same dimensions as the data grid
+            RenderTargetBitmap renderBitmap = new RenderTargetBitmap(
+                (int)canvas.ActualWidth, (int)maingrid.ActualHeight,
+                96d, 96d, PixelFormats.Pbgra32);
+
+            // Render the data grid to the RenderTargetBitmap
+            renderBitmap.Render(maingrid);
+            fileName = InputField.Text + ".png";
+            filePath += fileName;
+
+            // Create a BitmapEncoder and save the bitmap to a file
+            BitmapEncoder encoder = new PngBitmapEncoder(); // Encodes to a PNG
+            encoder.Frames.Add(BitmapFrame.Create(renderBitmap));
+            using (FileStream stream = new FileStream(fileName, FileMode.Create))
+            {
+                encoder.Save(stream);
+            }
+
+            InputBox.Visibility = System.Windows.Visibility.Collapsed;
+            InputField.Text = "";
+            MessageBox.Show(fileName + " saved.");
         }
     }
 }

@@ -176,6 +176,12 @@
 
             <Button Name="zoomin" Content="Zoom" Height="75" Width="62" Canvas.Left="818" Canvas.Top="394" Click="zoomin_Click"/>
             <Button Name="return" Content="Home" Width="62" Height="76"  Canvas.Left="818" Canvas.Top="281" Click="return_Click"/>
+            <Grid Name="InputBox" Height="100" Width="254" Canvas.Left="373" Canvas.Top="250" Background="White" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Collapsed">
+                <Border BorderBrush="Black" BorderThickness="1"/>
+                <TextBlock Text="Enter file name:" Margin="10,8,-40,42"/>
+                <TextBox Name="InputField" Margin="97,8,10,73"/>
+                <Button Name="SaveToFile" Content="Save" Margin="60,50,60,30" Click="SaveToFile_Click"/>
+            </Grid>
         </Canvas>
     </Viewbox>
 </Page>
