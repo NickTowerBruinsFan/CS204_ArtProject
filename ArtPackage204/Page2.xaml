@@ -5,117 +5,126 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ArtPackage204"
       mc:Ignorable="d" 
-      d:DesignHeight="1000" d:DesignWidth="1000" Background="SlateGray"
+      d:DesignHeight="1000" d:DesignWidth="1000" 
       Title="Page2">
+    <Page.Background>
+        <ImageBrush ImageSource="pack://application:,,,/Images/zlast.jpg">
+        </ImageBrush>
+    </Page.Background>
     <Viewbox Stretch="Uniform">
         <Canvas Height="600" Width="1000" Name="bigcanvas" Keyboard.KeyDown="bigcanvas_KeyDown">
             <ListBox  Height="600" Width="100" Margin="100,0,0,0">
+                <ListBoxItem Content="Ground" FontWeight="Bold"/>
                 <ListBoxItem Content="grass" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/grass.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                <ListBoxItem Content= "vertical path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_1">
+                <ListBoxItem Content="Paths" FontWeight="Bold"/>
+                <ListBoxItem Content= "Vertical Path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_1">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/uppath.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                <ListBoxItem Content="horizontal path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_7">
+                <ListBoxItem Content="Horizontal Path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_7">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/horixontalpath.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                <ListBoxItem Content="up right curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_2">
+                <ListBoxItem Content="Up Right Curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_2">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/curvepath.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                <ListBoxItem Content="up left curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_3">
+                <ListBoxItem Content="Up Left Curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_3">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/curvepathbottemleft.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                <ListBoxItem Content="down right curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_4">
+                <ListBoxItem Content="Down Right Curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_4">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/curvepathupperright.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                <ListBoxItem Content="down left curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_5">
+                <ListBoxItem Content="Down Left Curve" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_5">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/curvepathupperleft.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                <ListBoxItem Content="4 way path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_6">
+                <ListBoxItem Content="4 Way Path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_6">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/crosspath.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                <ListBoxItem Content="wall" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_8">
-                    <ListBoxItem.ToolTip>
-                        <Image Source="Images/wall.jpg" Width="70" Height="70" />
-                    </ListBoxItem.ToolTip>
-                </ListBoxItem>
-                <ListBoxItem Content="floor" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_9">
-                    <ListBoxItem.ToolTip>
-                        <Image Source="Images/stone floor.jpg" Width="70" Height="70" />
-                    </ListBoxItem.ToolTip>
-                </ListBoxItem>
-                <ListBoxItem Content="stairs" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_10">
-                    <ListBoxItem.ToolTip>
-                        <Image Source="Images/stairs.jpg" Width="70" Height="70" />
-                    </ListBoxItem.ToolTip>
-                </ListBoxItem>
-                <ListBoxItem Content="vertical window" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_11">
-                    <ListBoxItem.ToolTip>
-                        <Image Source="Images/window.jpg" Width="70" Height="70" />
-                    </ListBoxItem.ToolTip>
-                </ListBoxItem>
-                <ListBoxItem Content="horizontal window" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_21">
-                    <ListBoxItem.ToolTip>
-                        <Image Source="Images/window1.jpg" Width="70" Height="70" />
-                    </ListBoxItem.ToolTip>
-                </ListBoxItem>
-                <ListBoxItem Content="vertical door" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_12">
-                    <ListBoxItem.ToolTip>
-                        <Image Source="Images/door1.jpg" Width="70" Height="70" />
-                    </ListBoxItem.ToolTip>
-                </ListBoxItem>
-                <ListBoxItem Content="horizontal door" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_20">
-                    <ListBoxItem.ToolTip>
-                        <Image Source="Images/door.jpg" Width="70" Height="70" />
-                    </ListBoxItem.ToolTip>
-                </ListBoxItem>
-                <ListBoxItem Content="delete" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_15">
-                    <ListBoxItem.ToolTip>
-                        <Image Source="Images/earser.jpg" Width="70" Height="70" />
-                    </ListBoxItem.ToolTip>
-                </ListBoxItem>
-                <ListBoxItem Content="T shape path up" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_16">
+                <ListBoxItem Content="T Shape Path Up" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_16">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/tshapepath4.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                <ListBoxItem Content="T shape path down" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_17">
+                <ListBoxItem Content="T Shape Path Down" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_17">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/tshapepath2.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                <ListBoxItem Content="T shape path left" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_18">
+                <ListBoxItem Content="T Shape Path Left" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_18">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/tshapepath3.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                <ListBoxItem Content="T shape path right" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_19">
+                <ListBoxItem Content="T Shape Path Right" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_19">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/tshapepath.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
+                <ListBoxItem Content="Buildings" FontWeight="Bold"/>
+                <ListBoxItem Content="Wall" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_8">
+                    <ListBoxItem.ToolTip>
+                        <Image Source="Images/wall.jpg" Width="70" Height="70" />
+                    </ListBoxItem.ToolTip>
+                </ListBoxItem>
+                <ListBoxItem Content="Floor" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_9">
+                    <ListBoxItem.ToolTip>
+                        <Image Source="Images/stone floor.jpg" Width="70" Height="70" />
+                    </ListBoxItem.ToolTip>
+                </ListBoxItem>
+                <ListBoxItem Content="Stairs" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_10">
+                    <ListBoxItem.ToolTip>
+                        <Image Source="Images/stairs.jpg" Width="70" Height="70" />
+                    </ListBoxItem.ToolTip>
+                </ListBoxItem>
+                <ListBoxItem Content="Vertical Window" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_11">
+                    <ListBoxItem.ToolTip>
+                        <Image Source="Images/window.jpg" Width="70" Height="70" />
+                    </ListBoxItem.ToolTip>
+                </ListBoxItem>
+                <ListBoxItem Content="Horizontal Window" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_21">
+                    <ListBoxItem.ToolTip>
+                        <Image Source="Images/window1.jpg" Width="70" Height="70" />
+                    </ListBoxItem.ToolTip>
+                </ListBoxItem>
+                <ListBoxItem Content="Vertical Door" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_12">
+                    <ListBoxItem.ToolTip>
+                        <Image Source="Images/door1.jpg" Width="70" Height="70" />
+                    </ListBoxItem.ToolTip>
+                </ListBoxItem>
+                <ListBoxItem Content="Horizontal Door" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_20">
+                    <ListBoxItem.ToolTip>
+                        <Image Source="Images/door.jpg" Width="70" Height="70" />
+                    </ListBoxItem.ToolTip>
+                </ListBoxItem>
+                <ListBoxItem Content="Tools" FontWeight="Bold"/>
+                <ListBoxItem Content="Delete" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_15">
+                    <ListBoxItem.ToolTip>
+                        <Image Source="Images/earser.jpg" Width="70" Height="70" />
+                    </ListBoxItem.ToolTip>
+                </ListBoxItem>
+
             </ListBox>
-            <ListBox   Width="100" Height="600" Margin="800,0,0,0">
-                <ListBoxItem Content="chest" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_13"/>
-                <ListBoxItem Content="enemy" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_14"/>
-                <ListBoxItem Content="eraser" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_22"/>
-                <ListBoxItem Content="trap" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_23"/>
+            <ListBox   Width="100" Height="600" Margin="800,0,0,0" >
+                <ListBoxItem Content="Chest" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_13"/>
+                <ListBoxItem Content="Enemy" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_14"/>
+                <ListBoxItem Content="Trap" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_23"/>
+                <ListBoxItem Content="Eraser" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_22"/>
             </ListBox>
             <InkCanvas Name="canvas" Height="600" Width="600" Margin="200,0" >
 

@@ -76,19 +76,19 @@ namespace ArtPackage204
             }
             else if (picture == 3)
             {
-                bitmapImage = images[4];
+                bitmapImage = images[1];
             }
             else if (picture == 4)
             {
-                bitmapImage = images[3];
+                bitmapImage = images[2];
             }
             else if (picture == 5)
             {
-                bitmapImage = images[1];
+                bitmapImage = images[4];
             }
             else if (picture == 6)
             {
-                bitmapImage = images[2];
+                bitmapImage = images[3];
             }
             else if (picture == 7)
             {

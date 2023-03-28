@@ -54,7 +54,7 @@ namespace ArtPackage204
         private void button_Click_4(object sender, RoutedEventArgs e)
         {        
             MySqlConnection sqlConnection;
-            string connectionString = "server=localhost;database=204schema;uid=root;pwd=MyNewPass;";
+            string connectionString = "server=localhost;database=204schema;uid=root;pwd=rootpass;";
             sqlConnection = new MySqlConnection(connectionString);
             try
             {
