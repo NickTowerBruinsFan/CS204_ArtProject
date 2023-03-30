@@ -29,6 +29,10 @@ namespace ArtPackage204
         public Page2()
         {
             InitializeComponent();
+
+            ImageBrush myBrush = new ImageBrush();
+            myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/zlast.jpg", UriKind.Absolute));
+            this.Background = myBrush;
         }
         private void maingrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -75,19 +79,19 @@ namespace ArtPackage204
             }
             else if (picture == 3)
             {
-                bitmapImage = images[4];
+                bitmapImage = images[1];
             }
             else if (picture == 4)
             {
-                bitmapImage = images[3];
+                bitmapImage = images[2];
             }
             else if (picture == 5)
             {
-                bitmapImage = images[1];
+                bitmapImage = images[4];
             }
             else if (picture == 6)
             {
-                bitmapImage = images[2];
+                bitmapImage = images[3];
             }
             else if (picture == 7)
             {
@@ -284,21 +288,7 @@ namespace ArtPackage204
 
         private void Button_Click(object sender, RoutedEventArgs e) //Save button
         {
-            // Create a RenderTargetBitmap with the same dimensions as the data grid
-            RenderTargetBitmap renderBitmap = new RenderTargetBitmap(
-                (int)canvas.ActualWidth, (int)maingrid.ActualHeight,
-                96d, 96d, PixelFormats.Pbgra32);
-
-            // Render the data grid to the RenderTargetBitmap
-            renderBitmap.Render(maingrid);
-
-            // Create a BitmapEncoder and save the bitmap to a file
-            BitmapEncoder encoder = new PngBitmapEncoder(); // You can choose other bitmap encoder types too
-            encoder.Frames.Add(BitmapFrame.Create(renderBitmap));
-            using (FileStream stream = new FileStream("datagrid2.png", FileMode.Create))
-            {
-                encoder.Save(stream);
-            }
+            InputBox.Visibility = System.Windows.Visibility.Visible;
         }
 
         BitmapImage CreateBitmap(string uri)
@@ -310,27 +300,27 @@ namespace ArtPackage204
         {
             var imageUris = new[]
             {
- "pack://application:,,,/Images/crosspath.jpg",
- "pack://application:,,,/Images/curvepath.jpg",
- "pack://application:,,,/Images/curvepathbottemleft.jpg",
- "pack://application:,,,/Images/curvepathupperleft.jpg",
- "pack://application:,,,/Images/curvepathupperright.jpg",
- "pack://application:,,,/Images/door.jpg",
- "pack://application:,,,/Images/door1.jpg",
- "pack://application:,,,/Images/earser.jpg",
- "pack://application:,,,/Images/grass.jpg",
- "pack://application:,,,/Images/horixontalpath.jpg",
- "pack://application:,,,/Images/stairs.jpg",
- "pack://application:,,,/Images/stone floor.jpg",
- "pack://application:,,,/Images/tshapepath.jpg",
- "pack://application:,,,/Images/tshapepath2.jpg",
- "pack://application:,,,/Images/tshapepath3.jpg",
- "pack://application:,,,/Images/tshapepath4.jpg",
- "pack://application:,,,/Images/uppath.jpg",
- "pack://application:,,,/Images/wall.jpg",
- "pack://application:,,,/Images/window.jpg",
- "pack://application:,,,/Images/window1.jpg"
- };
+                "pack://application:,,,/Images/crosspath.jpg",
+                "pack://application:,,,/Images/curvepath.jpg",
+                "pack://application:,,,/Images/curvepathbottemleft.jpg",
+                "pack://application:,,,/Images/curvepathupperleft.jpg",
+                "pack://application:,,,/Images/curvepathupperright.jpg",
+                "pack://application:,,,/Images/door.jpg",
+                "pack://application:,,,/Images/door1.jpg",
+                "pack://application:,,,/Images/earser.jpg",
+                "pack://application:,,,/Images/grass.jpg",
+                "pack://application:,,,/Images/horixontalpath.jpg",
+                "pack://application:,,,/Images/stairs.jpg",
+                "pack://application:,,,/Images/stone floor.jpg",
+                "pack://application:,,,/Images/tshapepath.jpg",
+                "pack://application:,,,/Images/tshapepath2.jpg",
+                "pack://application:,,,/Images/tshapepath3.jpg",
+                "pack://application:,,,/Images/tshapepath4.jpg",
+                "pack://application:,,,/Images/uppath.jpg",
+                "pack://application:,,,/Images/wall.jpg",
+                "pack://application:,,,/Images/window.jpg",
+                "pack://application:,,,/Images/window1.jpg"
+            };
             return imageUris.Select(CreateBitmap).ToArray();
         }
 
@@ -473,7 +463,7 @@ namespace ArtPackage204
             // Create a BitmapEncoder and save the bitmap to a file
             BitmapEncoder encoder = new PngBitmapEncoder(); // Encodes to a PNG
             encoder.Frames.Add(BitmapFrame.Create(renderBitmap));
-            using (FileStream stream = new FileStream(filePath, FileMode.Create))
+            using (FileStream stream = new FileStream(fileName, FileMode.Create))
             {
                 encoder.Save(stream);
             }

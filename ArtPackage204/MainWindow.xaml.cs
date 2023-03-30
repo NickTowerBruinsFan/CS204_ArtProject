@@ -24,6 +24,10 @@ namespace ArtPackage204
         public MainWindow()
         {
             InitializeComponent();
+
+            ImageBrush myBrush = new ImageBrush();
+            myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Resources/2.jpg", UriKind.Absolute));
+            this.Background = myBrush;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
