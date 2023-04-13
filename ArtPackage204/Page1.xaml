@@ -6,12 +6,13 @@
       xmlns:local="clr-namespace:ArtPackage204"
       mc:Ignorable="d" 
       d:DesignHeight="1000" d:DesignWidth="1000" 
-      Title="Page1">
+      Title="Page1"
+      Name="P1">
     <Page.Background>
         <ImageBrush ImageSource="pack://application:,,,/Images/zlast.jpg">
         </ImageBrush>
     </Page.Background>
-    <Viewbox Stretch="Uniform" >
+    <Viewbox Stretch="Uniform" Name="viewBox">
         <Canvas Height="600" Width="1000" Name="bigcanvas" Keyboard.KeyDown="bigcanvas_KeyDown">
             <ListBox  Height="600" Width="100" Margin="100,0,0,0">
                 <ListBoxItem Content="Ground" FontWeight="Bold"/>
@@ -118,7 +119,7 @@
                         <Image Source="Images/earser.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                
+
             </ListBox>
             <ListBox   Width="100" Height="600" Margin="800,0,0,0" >
                 <ListBoxItem Content="Chest" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_13"/>
@@ -165,12 +166,13 @@
 
             <Button Name="zoomin" Content="Zoom" Height="75" Width="62" Canvas.Left="818" Canvas.Top="394" Click="zoomin_Click"/>
             <Button Name="return" Content="Home" Width="62" Height="76"  Canvas.Left="818" Canvas.Top="281" Click="return_Click"/>
-            
+            <Button Name="serialize" Content="Save Work" Width="62" Height="76"  Canvas.Left="818" Canvas.Top="168" HorizontalAlignment="Center" VerticalAlignment="Top" Click="serialize_Click"/>
+
             <Grid Name="InputBox" Height="100" Width="254" Canvas.Left="373" Canvas.Top="250" Background="White" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Collapsed">
                 <Border BorderBrush="Black" BorderThickness="1"/>
                 <TextBlock Text="Enter file name:" Margin="10,8,-40,42"/>
                 <TextBox Name="InputField" Margin="97,8,10,73"/>
-                <Button Name="SaveToFile" Content="Save" Margin="60,50,60,30" Click="SaveToFile_Click"/>
+                <Button Name="SaveToFile" Content="Export" Margin="60,50,60,30" Click="SaveToFile_Click"/>
             </Grid>
         </Canvas>
     </Viewbox>

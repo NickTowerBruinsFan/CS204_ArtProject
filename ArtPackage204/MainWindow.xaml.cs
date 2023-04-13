@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -47,9 +49,22 @@ namespace ArtPackage204
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            Page loadedPage = new Page();
+            string xamlfile = File.ReadAllText("testfile.xaml");
+            FrameworkElement loadedWorkspace = (FrameworkElement)XamlReader.Parse(xamlfile);
 
+            Button saveToFile = (Button)loadedWorkspace.FindName("SaveToFile");
+
+            saveToFile.Click += (s, ev) =>
+            {
+                MessageBox.Show("Test working.");
+            };
+
+            loadedPage.Content = loadedWorkspace;
+
+            this.Content = loadedWorkspace;
+            
         }
-
 
         private void button_Click_4(object sender, RoutedEventArgs e)
         {        

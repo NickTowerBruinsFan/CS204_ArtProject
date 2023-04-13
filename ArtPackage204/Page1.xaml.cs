@@ -10,6 +10,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -33,6 +34,15 @@ namespace ArtPackage204
         string filePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Renders\";
         bool iszoomed;
         Point last;
+
+        private void SerializeToXAML(UIElement element, string filename)
+        {
+            string xamlString = XamlWriter.Save(element);
+            FileStream filestream = File.Create(filename);
+            StreamWriter streamwriter = new StreamWriter(filestream);
+            streamwriter.Write(xamlString);
+            streamwriter.Close();
+        }
 
         private void maingrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -454,7 +464,7 @@ namespace ArtPackage204
                 96d, 96d, PixelFormats.Pbgra32);
 
             // Render the data grid to the RenderTargetBitmap
-            renderBitmap.Render(maingrid);
+            renderBitmap.Render(canvas);
             fileName = InputField.Text + ".png";
             filePath += fileName;
 
@@ -469,6 +479,13 @@ namespace ArtPackage204
             InputBox.Visibility = System.Windows.Visibility.Collapsed;
             InputField.Text = "";
             MessageBox.Show(fileName + " saved.");
+        }
+
+        private void serialize_Click(object sender, RoutedEventArgs e)
+        {
+            string filename = "testfile.xaml";
+            SerializeToXAML(viewBox, filename);
+            MessageBox.Show(filename + " saved.");
         }
     }
 }

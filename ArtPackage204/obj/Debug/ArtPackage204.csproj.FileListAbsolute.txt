@@ -184,3 +184,5 @@ C:\CS204\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.csproj.CoreCompi
 C:\CS204\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.csproj.CopyComplete
 C:\CS204\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.exe
 C:\CS204\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.pdb
+C:\CS204\CS204_ArtProject\ArtPackage204\obj\Debug\Page4.g.cs
+C:\CS204\CS204_ArtProject\ArtPackage204\obj\Debug\Page4.baml

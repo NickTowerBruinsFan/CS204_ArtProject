@@ -284,21 +284,7 @@ namespace ArtPackage204
 
         private void Button_Click(object sender, RoutedEventArgs e) //Save button
         {
-            // Create a RenderTargetBitmap with the same dimensions as the data grid
-            RenderTargetBitmap renderBitmap = new RenderTargetBitmap(
-                (int)canvas.ActualWidth, (int)maingrid.ActualHeight,
-                96d, 96d, PixelFormats.Pbgra32);
-
-            // Render the data grid to the RenderTargetBitmap
-            renderBitmap.Render(maingrid);
-
-            // Create a BitmapEncoder and save the bitmap to a file
-            BitmapEncoder encoder = new PngBitmapEncoder(); // You can choose other bitmap encoder types too
-            encoder.Frames.Add(BitmapFrame.Create(renderBitmap));
-            using (FileStream stream = new FileStream("datagrid2.png", FileMode.Create))
-            {
-                encoder.Save(stream);
-            }
+            InputBox.Visibility = System.Windows.Visibility.Visible;
         }
 
         BitmapImage CreateBitmap(string uri)
@@ -454,15 +440,13 @@ namespace ArtPackage204
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             w.Close();
-
-
         }
 
         private void SaveToFile_Click(object sender, RoutedEventArgs e)
         {
             // Create a RenderTargetBitmap with the same dimensions as the data grid
             RenderTargetBitmap renderBitmap = new RenderTargetBitmap(
-                (int)canvas.ActualWidth, (int)maingrid.ActualHeight,
+                (int)canvas.ActualWidth + 200, (int)canvas.ActualHeight,
                 96d, 96d, PixelFormats.Pbgra32);
 
             // Render the data grid to the RenderTargetBitmap
@@ -473,7 +457,7 @@ namespace ArtPackage204
             // Create a BitmapEncoder and save the bitmap to a file
             BitmapEncoder encoder = new PngBitmapEncoder(); // Encodes to a PNG
             encoder.Frames.Add(BitmapFrame.Create(renderBitmap));
-            using (FileStream stream = new FileStream(filePath, FileMode.Create))
+            using (FileStream stream = new FileStream(fileName, FileMode.Create))
             {
                 encoder.Save(stream);
             }
