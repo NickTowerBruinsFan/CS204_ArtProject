@@ -11,16 +11,23 @@
         <ImageBrush ImageSource="pack://application:,,,/Images/zlast.jpg">
         </ImageBrush>
     </Page.Background>
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Fonts.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
     <Viewbox Stretch="Uniform">
         <Canvas Height="600" Width="1000" Name="bigcanvas" Keyboard.KeyDown="bigcanvas_KeyDown">
-            <ListBox  Height="600" Width="100" Margin="100,0,0,0">
-                <ListBoxItem Content="Ground" FontWeight="Bold"/>
+            <ListBox  Height="600" Width="100" Margin="100,0,0,0" FontSize="12"  FontFamily="{StaticResource Regular}">
+                <ListBoxItem Content="Ground" FontFamily="{StaticResource Bold}"/>
                 <ListBoxItem Content="grass" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/grass.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                <ListBoxItem Content="Paths" FontWeight="Bold"/>
+                <ListBoxItem Content="Paths" FontFamily="{StaticResource Bold}"/>
                 <ListBoxItem Content= "Vertical Path" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_1">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/uppath.jpg" Width="70" Height="70" />
@@ -76,7 +83,7 @@
                         <Image Source="Images/tshapepath.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                <ListBoxItem Content="Buildings" FontWeight="Bold"/>
+                <ListBoxItem Content="Buildings" FontFamily="{StaticResource Bold}"/>
                 <ListBoxItem Content="Wall" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_8">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/wall.jpg" Width="70" Height="70" />
@@ -112,7 +119,7 @@
                         <Image Source="Images/door.jpg" Width="70" Height="70" />
                     </ListBoxItem.ToolTip>
                 </ListBoxItem>
-                <ListBoxItem Content="Tools" FontWeight="Bold"/>
+                <ListBoxItem Content="Tools" FontFamily="{StaticResource Bold}"/>
                 <ListBoxItem Content="Delete" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_15">
                     <ListBoxItem.ToolTip>
                         <Image Source="Images/earser.jpg" Width="70" Height="70" />
@@ -120,7 +127,7 @@
                 </ListBoxItem>
 
             </ListBox>
-            <ListBox   Width="100" Height="600" Margin="800,0,0,0" >
+            <ListBox   Width="100" Height="600" Margin="800,0,0,0" FontSize="12"  FontFamily="{StaticResource Regular}">
                 <ListBoxItem Content="Chest" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_13"/>
                 <ListBoxItem Content="Enemy" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_14"/>
                 <ListBoxItem Content="Trap" PreviewMouseLeftButtonDown="ListBoxItem_PreviewMouseLeftButtonDown_23"/>
@@ -170,16 +177,16 @@
                     </Grid.RowDefinitions>
                 </Grid>
             </InkCanvas>
-            <Button Name="Save" Content="Save" Margin="-1,103,1,-103" Height="75" Canvas.Left="819" Canvas.Top="403" Width="62" Click="Button_Click" >
+            <Button Name="Save" Content="Save" Margin="-1,103,1,-103" Height="75" Canvas.Left="819" Canvas.Top="403" Width="62" Click="Button_Click" FontSize="12"  FontFamily="{StaticResource Regular}">
             </Button>
 
-            <Button Name="zoomin" Content="Zoom" Height="75" Width="62" Canvas.Left="818" Canvas.Top="394" Click="zoomin_Click"/>
-            <Button Name="return" Content="Home" Width="62" Height="76"  Canvas.Left="818" Canvas.Top="281" Click="return_Click"/>
+            <Button Name="zoomin" Content="Zoom" Height="75" Width="62" Canvas.Left="818" Canvas.Top="394" Click="zoomin_Click" FontSize="12"  FontFamily="{StaticResource Regular}"/>
+            <Button Name="return" Content="Home" Width="62" Height="76"  Canvas.Left="818" Canvas.Top="281" Click="return_Click" FontSize="12"  FontFamily="{StaticResource Regular}"/>
             <Grid Name="InputBox" Height="100" Width="254" Canvas.Left="373" Canvas.Top="250" Background="White" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Collapsed">
                 <Border BorderBrush="Black" BorderThickness="1"/>
-                <TextBlock Text="Enter file name:" Margin="10,8,-40,42"/>
+                <TextBlock Text="Enter file name:" Margin="10,8,-40,42" FontSize="12"  FontFamily="{StaticResource Regular}"/>
                 <TextBox Name="InputField" Margin="97,8,10,73"/>
-                <Button Name="SaveToFile" Content="Export" Margin="60,50,60,30" Click="SaveToFile_Click"/>
+                <Button Name="SaveToFile" Content="Save" Margin="60,50,60,30" Click="SaveToFile_Click" FontSize="12"  FontFamily="{StaticResource Regular}"/>
             </Grid>
         </Canvas>
     </Viewbox>

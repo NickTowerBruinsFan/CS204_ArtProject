@@ -186,3 +186,5 @@ C:\CS204\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.exe
 C:\CS204\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.pdb
 C:\CS204\CS204_ArtProject\ArtPackage204\obj\Debug\Page4.g.cs
 C:\CS204\CS204_ArtProject\ArtPackage204\obj\Debug\Page4.baml
+C:\Users\bmart\OneDrive\Documents\GitHub\CS204_ArtProject\ArtPackage204\obj\Debug\Fonts.baml
+C:\Users\bmart\OneDrive\Documents\GitHub\CS204_ArtProject\ArtPackage204\obj\Debug\ArtPackage204.Images.resources

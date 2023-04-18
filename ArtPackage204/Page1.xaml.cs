@@ -10,7 +10,6 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -34,15 +33,6 @@ namespace ArtPackage204
         string filePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\Renders\";
         bool iszoomed;
         Point last;
-
-        private void SerializeToXAML(UIElement element, string filename)
-        {
-            string xamlString = XamlWriter.Save(element);
-            FileStream filestream = File.Create(filename);
-            StreamWriter streamwriter = new StreamWriter(filestream);
-            streamwriter.Write(xamlString);
-            streamwriter.Close();
-        }
 
         private void maingrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -309,27 +299,27 @@ namespace ArtPackage204
         {
             var imageUris = new[]
             {
-            "pack://application:,,,/Images/crosspath.jpg",
-            "pack://application:,,,/Images/curvepath.jpg",
-            "pack://application:,,,/Images/curvepathbottemleft.jpg",
-            "pack://application:,,,/Images/curvepathupperleft.jpg",
-            "pack://application:,,,/Images/curvepathupperright.jpg",
-            "pack://application:,,,/Images/door.jpg",
-            "pack://application:,,,/Images/door1.jpg",
-            "pack://application:,,,/Images/earser.jpg",
-            "pack://application:,,,/Images/grass.jpg",
-            "pack://application:,,,/Images/horixontalpath.jpg",
-            "pack://application:,,,/Images/stairs.jpg",
-            "pack://application:,,,/Images/stone floor.jpg",
-            "pack://application:,,,/Images/tshapepath.jpg",
-            "pack://application:,,,/Images/tshapepath2.jpg",
-            "pack://application:,,,/Images/tshapepath3.jpg",
-            "pack://application:,,,/Images/tshapepath4.jpg",
-            "pack://application:,,,/Images/uppath.jpg",
-            "pack://application:,,,/Images/wall.jpg",
-            "pack://application:,,,/Images/window.jpg",
-            "pack://application:,,,/Images/window1.jpg"
- };
+                "pack://application:,,,/Images/crosspath.jpg",
+                "pack://application:,,,/Images/curvepath.jpg",
+                "pack://application:,,,/Images/curvepathbottemleft.jpg",
+                "pack://application:,,,/Images/curvepathupperleft.jpg",
+                "pack://application:,,,/Images/curvepathupperright.jpg",
+                "pack://application:,,,/Images/door.jpg",
+                "pack://application:,,,/Images/door1.jpg",
+                "pack://application:,,,/Images/earser.jpg",
+                "pack://application:,,,/Images/grass.jpg",
+                "pack://application:,,,/Images/horixontalpath.jpg",
+                "pack://application:,,,/Images/stairs.jpg",
+                "pack://application:,,,/Images/stone floor.jpg",
+                "pack://application:,,,/Images/tshapepath.jpg",
+                "pack://application:,,,/Images/tshapepath2.jpg",
+                "pack://application:,,,/Images/tshapepath3.jpg",
+                "pack://application:,,,/Images/tshapepath4.jpg",
+                "pack://application:,,,/Images/uppath.jpg",
+                "pack://application:,,,/Images/wall.jpg",
+                "pack://application:,,,/Images/window.jpg",
+                "pack://application:,,,/Images/window1.jpg"
+            };
             return imageUris.Select(CreateBitmap).ToArray();
         }
 
@@ -464,7 +454,7 @@ namespace ArtPackage204
                 96d, 96d, PixelFormats.Pbgra32);
 
             // Render the data grid to the RenderTargetBitmap
-            renderBitmap.Render(canvas);
+            renderBitmap.Render(maingrid);
             fileName = InputField.Text + ".png";
             filePath += fileName;
 
@@ -479,13 +469,6 @@ namespace ArtPackage204
             InputBox.Visibility = System.Windows.Visibility.Collapsed;
             InputField.Text = "";
             MessageBox.Show(fileName + " saved.");
-        }
-
-        private void serialize_Click(object sender, RoutedEventArgs e)
-        {
-            string filename = "testfile.xaml";
-            SerializeToXAML(viewBox, filename);
-            MessageBox.Show(filename + " saved.");
         }
     }
 }
